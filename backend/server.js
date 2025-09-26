@@ -112,12 +112,11 @@ app.delete("/api/listings/:id", authenticateToken, async (req, res) => {
 // Serve frontend files
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Catch-all route to serve index.html
-app.get("*", (req, res) => {
+// Catch-all route to index.html (for SPA routing)
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
-
-
 // Start server
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
