@@ -109,7 +109,7 @@ app.delete("/api/listings/:id", authenticateToken, async (req, res) => {
 });
 
 // Catch all for frontend routes
-app.get("*", (req, res) => {
+app.get("/:any*", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
