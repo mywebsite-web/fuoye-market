@@ -108,10 +108,16 @@ app.delete("/api/listings/:id", authenticateToken, async (req, res) => {
   res.json({ message: "Listing deleted" });
 });
 
-// Catch all for frontend routes
-app.get("/:any*", (req, res) => {
+const path = require("path");
+
+// Serve frontend files
+app.use(express.static(path.join(__dirname, "../frontend")));
+
+// Catch-all route to serve index.html
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
+
 
 
 // Start server
