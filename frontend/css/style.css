@@ -1,0 +1,29 @@
+/* General */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f2f2f2; margin: 0; padding: 0; }
+header { background: #f36f21; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; }
+header a { color: #fff; text-decoration: none; margin-left: 15px; font-weight: bold; }
+header a:hover { text-decoration: underline; }
+
+main { display: flex; flex-wrap: wrap; justify-content: center; margin: 20px auto; max-width: 1200px; }
+
+/* Ad Card */
+.ad-card { background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 15px; width: 280px; overflow: hidden; transition: transform 0.2s; }
+.ad-card:hover { transform: scale(1.03); }
+
+.ad-images img { width: 100%; height: 180px; object-fit: cover; }
+.ad-card h2 { font-size: 1.2rem; margin: 10px; color: #333; }
+.ad-card p { margin: 5px 10px; color: #555; font-size: 0.9rem; }
+
+button { background: #f36f21; color: #fff; border: none; padding: 8px 15px; margin: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+button:hover { background: #e55a00; }
+
+/* Form Styles */
+form { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 500px; margin: 20px auto; }
+form input, form textarea { width: 100%; padding: 8px; margin: 5px 0 15px 0; border-radius: 5px; border: 1px solid #ccc; }
+form button { width: 100%; padding: 10px; }
+
+/* Responsive */
+@media(max-width: 600px){
+  main { flex-direction: column; align-items: center; }
+  .ad-card { width: 90%; }
+}

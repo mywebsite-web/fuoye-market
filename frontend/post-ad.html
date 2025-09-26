@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post Ad -Fuoye Market Place</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Fuoye Market Place</h1>
+  <nav>
+    <a href="index.html">Home</a> | 
+    <a href="login.html">Login</a> | 
+    <a href="register.html">Register</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Post Your Ad</h2>
+  <form id="postAdForm" enctype="multipart/form-data">
+    <label>Title:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>Price:</label><br>
+    <input type="number" name="price" required><br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description" rows="4" required></textarea><br><br>
+
+    <label>Phone:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Images:</label><br>
+    <input type="file" name="images" multiple accept="image/*" required><br><br>
+
+    <button type="submit">Post Ad</button>
+  </form>
+  <p id="status"></p>
+</main>
+
+<script src="js/post-ad.js"></script>
+</body>
+</html>
+
+
+
+
+
