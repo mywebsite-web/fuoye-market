@@ -108,7 +108,6 @@ app.delete("/api/listings/:id", authenticateToken, async (req, res) => {
   res.json({ message: "Listing deleted" });
 });
 
-const path = require("path");
 
 // Serve frontend files
 app.use(express.static(path.join(__dirname, "../frontend")));
